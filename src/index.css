@@ -1,0 +1,424 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+} */
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(32, 97, 194);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+p{
+  margin-bottom: 0!important;
+}
+.catagory{
+  width: 23%;
+  font-size: 12px;
+  padding:10px 0px;
+}
+
+h3{
+  font: 32px roboto, sans-serif !important;
+  font-weight: 800 !important;
+}
+
+h4{
+  font: 18px roboto, sans-serif !important;
+  font-weight: 600 !important;
+  margin: 0 0 1rem 0;
+}
+
+.log_amount,#card_title{
+  font: 16px roboto, sans-serif;
+  font-weight: bold;
+}
+
+.log_description{
+  margin: 0.5rem 2rem 0.5rem 1rem!important;
+  font: 14px roboto, sans-serif;
+  font-weight: bold;
+}
+
+.log_date{
+  margin: 1rem 2rem 2rem 1rem;
+  font: 9px roboto, sans-serif;
+  font-weight: 800;
+}
+
+
+
+
+
+/*font style end*/
+
+
+#root{
+width: 100%;
+height: 100vh;
+background-image: url(/src/img/bg2.png);
+/* background-image: url(/src/img/bg1.jpg); */
+background-size: cover;
+background-position: left top;
+display: flex;
+justify-content: center;
+}
+
+.main_div,.container1,.row1,.row2{
+  display: flex;
+}
+
+.row2{
+  z-index: 0 !important;
+}
+/* .navbar{
+  width: 15.48vw;
+  height: 99vh;
+  border: solid;
+  border-radius: 0 1rem 1rem 0;
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  backdrop-filter: blur(42px);
+  border: 1px solid;
+  border-image-source: linear-gradient(169.15deg, rgba(255, 255, 255, 0.4) 0%, rgba(238, 237, 237, 0.2) 96.79%);
+} */
+
+.glass{
+  background: rgba( 255, 255, 255, 0.15 );
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  border-radius: 1rem;
+}
+
+.glassbtn{
+  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02), inset 5px 5px 4px rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(42px);
+  border: 1px solid;
+  border-image-source: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 8px;
+}
+
+
+
+#card1,#card2,#card3{
+  width: 15.555vw;
+  height: 14.81vh;
+  /* min-width:220px; */
+  margin: 2.71vh 3vw;
+}
+
+#card1{
+  margin: 2.71vh 1.5vw !important ;
+}
+
+#expense,#income{
+  width: 29.30vw;
+  height: 43.33vh;
+}
+
+#expense {
+margin: 0 0.76vw 0 1.52vw;
+padding:18px 30px 30px 30px;
+}
+#income{
+  margin: 0 1.52vw  0 0.76vw ;
+  padding:30px;
+  }
+
+#balance_breakup{
+  width: 21.94vw;
+  height: 31.23vh;
+  margin: 0 0.76vw 0 1.52vw;
+}
+
+#expense_breakup{
+  width:36vw;
+  height: 31.23vh;
+  margin: 0 1.52vw  0 0.76vw ;
+}
+
+
+.history{
+  width: 19.51vw;
+  height: 77.53vh;
+  margin-right:1.52vw ;
+  overflow: auto;
+}
+
+.inputs{
+  width: 62.63vw;
+  /* z-index: 10 !important; */
+}
+
+
+
+input,select,#addbtn,#date{
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 8px;
+  height: 40px;
+  /* width: 49%; */
+}
+
+
+.logs{
+  margin : 0.75rem 0.75rem;
+  background: rgba(244, 244, 244, 0.9);
+  border-radius: 8px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+  display: flex;
+}
+
+
+.rectangle{
+  width : 6px;
+  height: 100%;
+  left:0px;
+}
+
+.log_icon{
+  width : 50px;
+  height: 100%;
+  background-color: #30C1DB;
+  position: absolute;
+  right: 0px;
+}
+
+p{
+  margin-top: auto!important;
+}
+
+
+
+#card1,#card2, #card3{
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: right;
+  text-align: center;
+  color: #fff;
+}
+
+#card1{background-image: url(/src/img/card1.svg); }
+#card2{background-image: url(/src/img/card2.svg);}
+#card3{background-image: url(/src/img/card3.svg);}
+
+
+#card_amount{
+  position: absolute;
+  top : 3.7vh;
+  margin-bottom: 20px;
+}
+
+#card_title{
+  position: absolute;
+  bottom : 1.41vh;
+}
+
+#cards{
+  /* width : 100%; */
+  display: flex;
+  justify-content: center;
+}
+
+
+/*Media query Responsive Start*/
+
+
+
+@media screen and (max-width: 600px) {
+  #cards,#row1,#row2,#container1,.main_div{ 
+      display: block!important;
+  }
+
+  .main_div{justify-content: center;}
+  .navbar{
+      display: none!important;
+  }
+
+  .log_amount,#card_title{
+      font: 12px roboto, sans-serif;
+      font-weight: bold;
+  }
+
+  
+
+  .inputs{
+      width : 100%!important;
+      height: auto;
+  }
+  #card1,#card2,#card3{
+      width: 90%;
+      height : 80px;
+      margin: 10px auto!important;
+  }
+
+  #expense,#income{
+      width: 100%;
+      height: 351px;
+      margin: 10px auto!important;
+  }
+
+  .history{
+      width: 90%;
+      /* height: 77.53vh; */
+      margin : auto!important;
+  }
+}
+
+
+/*Media query Responsive End*/
+
+
+
+
+/* Form styles*/
+#Amount {
+  width: 100%;
+}
+
+.catagory {
+  display: flex;
+}
+
+
+#expense .catagory input, #income .catagory input{
+	display: none;
+}
+
+#expense .catagory label,#income .catagory label{
+	position: relative;
+	color: #fff;
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 13.0px );
+  -webkit-backdrop-filter: blur( 13.0px );
+  border-radius: 8px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+	font: 12px roboto, sans-serif;
+  font-weight: 500;
+	text-align: center;
+  width : 88px;
+	height: 32px;
+	line-height: 32px;
+	display: block;
+  padding: 0 8px 0 8px;
+	cursor: pointer;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  margin: 6px ;
+}
+
+
+
+
+#submit_expense{	cursor: pointer; }
+
+#expense .catagory .Grocery{box-shadow: 0 6px #2CC0DA ;}
+#expense .catagory #Grocery:checked + label{	background-color: #2CC0DA;}
+
+#expense .catagory .EatingOut{box-shadow: 0 6px #D95774 ;}
+#expense .catagory #EatingOut:checked + label{	background-color: #D95774;}
+
+#expense .catagory .Household{box-shadow: 0 6px #1FCA6D ;}
+#expense .catagory #Household:checked + label{	background-color: #1FCA6D;}
+
+#expense .catagory .Utility{box-shadow: 0 6px #5467DF ;}
+#expense .catagory #Utility:checked + label{	background-color: #5467DF;}
+
+#expense .catagory .Fuel_Auto{box-shadow: 0 6px #C8D62F ;}
+#expense .catagory #Fuel_Auto:checked + label{	background-color: #C8D62F;}
+
+#expense .catagory .Personal{box-shadow: 0 6px #D97B5D ;}
+#expense .catagory #Personal:checked + label{	background-color: #D97B5D;}
+
+#expense .catagory .Debt_Repay{box-shadow: 0 6px #AE4EBE ;}
+#expense .catagory #Debt_Repay:checked + label{	background-color: #AE4EBE;}
+
+#expense .catagory .Other{box-shadow: 0 6px #C13535 ;}
+#expense .catagory #Other:checked + label{	background-color: #C13535;}
+
+
+#income .catagory .MyAccount{box-shadow: 0 6px #FCB142 ;}
+#income .catagory #MyAccount:checked + label{	background-color: #FCB142;}
+
+#income .catagory .HerAccount{box-shadow: 0 6px #19D54E ;}
+#income .catagory #HerAccount:checked + label{	background-color: #19D54E;}
+
+#income .catagory .Cash{box-shadow: 0 6px #F7355F ;}
+#income .catagory #Cash:checked + label{	background-color: #F7355F;}
+
+#income .catagory .OtherIncome{box-shadow: 0 6px #D849B9 ;}
+#income .catagory #OtherIncome:checked + label{	background-color: #D849B9;}
+
+
+
+/** BarChartExpense Design**/
+
+#BarChartIncome{
+  width : 316px;
+  height : 238px; 
+}
+
+#BarChartExpense{
+  height : 238px; 
+}
+
+td{
+  border: none !important;
+  padding: 2px 0  !important;
+  font-size: 14px;
+  color : #ffffff;
+}
+
+.align_right { 
+  text-align: right;
+  padding-right: 8px !important;
+}
+
+.BarChartExpense td {
+  padding: 1px 0  !important;
+  font-size: 12px ;
+}
+
+.css-2b097c-container,.css-yk16xz-control,
+.css-g1d714-ValueContainer,.css-b8ldur-Input {
+  width : 160px;
+  height: 40px;
+  z-index: 10 !important;
+}
+
+.css-2613qy-menu {
+  z-index: 100 !important;
+}
