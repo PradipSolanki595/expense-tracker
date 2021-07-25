@@ -223,8 +223,8 @@ let OtherSourceTotal = OtherSourceArray.reduce(function (a,b) { return a + b;},0
            {/* <div class="navbar ">
             </div> */}
          <div class="dashboard">
-           <div id="cards" class="">
-              <div class="d-flex flex-column justify-content-center align-self-center" style= {{"margin": "2.71vh 3vw;"}}> 
+           <div id="topBar" class="">
+              <div class="filterdate" style= {{"margin": "2.71vh 3vw;"}}> 
 
               <Select value={Months.filter(function(e) { return e.value === selectedMonth;})}
                 onChange={this.handleMonthChange} 
@@ -235,7 +235,10 @@ let OtherSourceTotal = OtherSourceArray.reduce(function (a,b) { return a + b;},0
                 options={Years} />
 
               </div>
-             <Card totalExpense = {totalExpense} totalIncome = {totalIncome}  />
+              <div>             
+                <Card totalExpense = {totalExpense} totalIncome = {totalIncome}  />
+              </div>
+
              </div>
            <div id="container1" class="container1">
               <div class="inputs">

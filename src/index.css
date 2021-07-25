@@ -250,13 +250,68 @@ p{
   justify-content: center;
 }
 
+.filterdate{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-self: center;
+}
+
+#topBar{
+  margin-top: 0 !important;
+  display: flex !important;
+  justify-content: center;
+}
+
 
 /*Media query Responsive Start*/
 
 
 
 @media screen and (max-width: 600px) {
-  #cards,#row1,#row2,#container1,.main_div{ 
+  h3{
+    font: 24px roboto, sans-serif !important;
+    font-weight: 800 !important;
+  }
+  
+  h4{
+    font: 14px roboto, sans-serif !important;
+    font-weight: 600 !important;
+    margin: 0 0 1rem 0;
+  }
+  
+
+  #root{
+    background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);
+    height:auto;
+  }
+
+
+  #card1,#card2,#card3{
+    width: 90% !important;
+    height : 80px !important;
+    margin: 10px!important;
+}
+
+#card_amount{
+  position: absolute;
+  top : 12px;
+  margin-bottom: 20px;
+}
+
+#card_title{
+  position: absolute;
+  bottom : 6px ;
+}
+
+#topBar{
+  margin-top: 20px;
+}
+.filterdate{
+ flex-direction: row;
+}
+
+#topBar,#row1,#row2,#container1,.main_div{ 
       display: block!important;
   }
 
@@ -270,29 +325,31 @@ p{
       font-weight: bold;
   }
 
-  
-
   .inputs{
       width : 100%!important;
       height: auto;
   }
-  #card1,#card2,#card3{
-      width: 90%;
-      height : 80px;
-      margin: 10px auto!important;
-  }
+
 
   #expense,#income{
       width: 100%;
-      height: 351px;
+      height: auto;
       margin: 10px auto!important;
   }
 
   .history{
-      width: 90%;
+      width: 100%;
       /* height: 77.53vh; */
       margin : auto!important;
   }
+
+  #BarChartIncome,#row2,#BarChartExpense{
+    margin: 10px auto !important;
+    width : auto !important;
+    height : auto !important; 
+  }
+
+
 }
 
 
