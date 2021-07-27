@@ -8,7 +8,8 @@ class IncomeForm extends React.Component {
     
     this.state = {
         DataBase : [],
-        selectedOption: 'Yes'
+        selectedOption: 'Yes',
+        userData : JSON.parse(localStorage.getItem('user'))
     };
     this.radioChange = this.radioChange.bind(this);
   }
@@ -22,8 +23,10 @@ class IncomeForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
-    let IncomeRef = firebase.database().ref("IncomeData"); 
+    let userData = this.state.userData
+    let userName = userData.googleId
+    let path = userName + " IncomeData"
+    let IncomeRef = firebase.database().ref(path); 
 
     var tempFormData = {
           Key : Date.now(),

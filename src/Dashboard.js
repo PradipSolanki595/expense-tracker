@@ -38,12 +38,19 @@ class Dashboard extends React.Component {
         ExpenseData : [],
         IncomeData : [],
         selectedMonth: "07",
-        selectedYear: 2021 ,
+        selectedYear: 2021,
+        userData : JSON.parse(localStorage.getItem('user'))
     };
   }
+
+
+
   changeDatabase = () => {
+    let userData = this.state.userData
+    let userName = userData.googleId
     var tempExpenseData = [];
-    var ExpenseRef = firebase.database().ref("ExpenseData"); 
+    var ExpenseRef = firebase.database().ref(userName + " ExpenseData"); 
+    console.log(userName);
     ExpenseRef.on('value', (snapshot) => {
     var Expenses = snapshot.val();
     for (let id in Expenses){
@@ -54,8 +61,10 @@ class Dashboard extends React.Component {
 }
 
 changeDatabase1 = () => {
+    let userData = this.state.userData
+    let userName = userData.googleId
     var tempIncomeData = [];
-    var IncomeRef = firebase.database().ref("IncomeData"); 
+    var IncomeRef = firebase.database().ref(userName + " IncomeData"); 
     IncomeRef.on('value', (snapshot) => {
     var Incomes = snapshot.val();
     for (let id in Incomes){
@@ -98,7 +107,7 @@ function finder(e){
   var res = patt.test(str);
   if (res == true){ return e}
 }
-console.log(FilterDate)
+
 
 
 let data = ExpenseData.concat(IncomeData)

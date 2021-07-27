@@ -9,9 +9,11 @@ class App extends React.Component {
     constructor(props){
         super(props); 
         this.state = {
+          userData : [],
         };
       }
-   
+
+  
 
  render()
  { 
@@ -20,7 +22,7 @@ class App extends React.Component {
           <div>
             <Switch>
                 <Route exact path="/">
-                  <AuthPage/>
+                  <AuthPage  />
                 </Route>
                 <Route path="/dashboard">
                   <Dashboard />

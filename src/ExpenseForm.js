@@ -29,6 +29,7 @@ class ExpenseForm extends React.Component {
         selectedOption: 'Yes',
         source : "",
         selectedDrop: "",
+        userData : JSON.parse(localStorage.getItem('user'))
     };
     this.radioChange = this.radioChange.bind(this);
   }
@@ -39,11 +40,14 @@ class ExpenseForm extends React.Component {
     });
   }
 
- 
+
   handleSubmit(e) {
     e.preventDefault();
-
-    let ExpenseRef = firebase.database().ref("ExpenseData"); 
+    let userData = this.state.userData
+    let userName = userData.googleId
+    let path = userName + " ExpenseData"
+    console.log(userData)
+    let ExpenseRef = firebase.database().ref(path); 
 
     var tempFormData = {
           Key : Date.now(),
@@ -57,13 +61,7 @@ class ExpenseForm extends React.Component {
 
     ExpenseRef.push(tempFormData)
     this.props.onChangeDatabase();  
-      // var x = this.state.DataBase;
-      // x.push(tempFormData);
 
-    // this.setState({DataBase : x });
-
-    
-    // console.log(x)
 
   }
 
@@ -73,8 +71,6 @@ class ExpenseForm extends React.Component {
 
   render ()  
   {  
-    
-   
 
   const { selectedDrop } = this.state;
   
