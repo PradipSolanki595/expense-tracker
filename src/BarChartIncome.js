@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import ProgressBar from 'react-bootstrap/ProgressBar';
+import { FormatSpecifier } from 'd3';
 
 class BarChartIncome extends React.Component {
     
@@ -49,7 +50,7 @@ class BarChartIncome extends React.Component {
             <div class="px-4 py-2"> 
             <table class="table table-borderless">
                   <tbody>
-                  <tr style={{borderBottom: "1px", borderStyle: "solid", borderColor : "#fff", fontWeight : 600,}}>
+                  <tr style={{borderBottom: "1px", borderStyle: "solid", borderColor : "#c4c4c4", fontWeight : 600,}}>
                       <td> 
                       </td>
                       <td>Total</td>

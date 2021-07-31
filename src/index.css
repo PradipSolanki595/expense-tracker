@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.expense1{
+  display: flex;
+  width: 100%;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -37,7 +41,7 @@ p{
   margin-bottom: 0!important;
 }
 .catagory{
-  width: 23%;
+  display: flex;
   font-size: 12px;
   padding:10px 0px;
 }
@@ -80,15 +84,15 @@ h4{
 #root{
 width: 100%;
 height: 100vh;
-background-image: url(/src/img/bg2.png);
-/* background-image: url(/src/img/bg1.jpg); */
+background-image: url(/src/img/bg.png);
+/* background-color: hsl(0, 0%, 85%); */
 background-size: cover;
 background-position: left top;
 display: flex;
 justify-content: center;
 }
 
-.main_div,.container1,.row1,.row2{
+.container1,.row1,.row2{
   display: flex;
 }
 
@@ -107,21 +111,26 @@ justify-content: center;
 } */
 
 .glass{
-  background: rgba( 255, 255, 255, 0.15 );
-  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  /* background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  border-radius: 1rem;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );*/
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px 0px rgba(101,101,101,0.30);
+  background-color:  rgba(255,255,255,0.80);
+
+
+
 }
 
 .glassbtn{
-  background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%); */
   /* box-shadow: inset -5px -5px 250px rgba(255, 255, 255, 0.02), inset 5px 5px 4px rgba(255, 255, 255, 0.1); */
-  backdrop-filter: blur(42px);
+  /* backdrop-filter: blur(42px); */
   border: 1px solid;
-  border-image-source: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+  /* border-image-source: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%); */
   border-radius: 8px;
 }
 
@@ -136,6 +145,39 @@ justify-content: center;
 
 #card1{
   margin: 2.71vh 1.5vw !important ;
+}
+
+
+#card1,#card2, #card3{
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: right;
+  text-align: center;
+}
+
+#card1{background-image: url(/src/img/card1.svg); 
+        color: #D95774;}
+#card2{background-image: url(/src/img/card2.svg);
+  color: #1FCA6D;}
+#card3{background-image: url(/src/img/card3.svg);
+  color: #FCB142;}
+
+
+#card_amount{
+  position: absolute;
+  top : 2.74vh;
+  margin-bottom: 20px;
+}
+
+#card_title{
+  position: absolute;
+  bottom : 1.2vh;
+}
+
+#cards{
+  /* width : 100%; */
+  display: flex;
+  justify-content: center;
 }
 
 #expense,#income{
@@ -181,12 +223,20 @@ padding:18px 30px 30px 30px;
 
 input,select,#addbtn,#date{
   background: rgba(255, 255, 255, 0.8);
-  border: none;
+  border: solid 1px #c4c4c4;
   border-radius: 8px;
   height: 40px;
+  padding-left: 8px;
   /* width: 49%; */
 }
 
+#Date { width: 50% !important;}
+
+.Dropdown-control {
+  border-radius: 8px;
+  margin-left: 8px;
+  width: 100%;
+}
 
 .logs{
   margin : 0.75rem 0.75rem;
@@ -197,6 +247,7 @@ input,select,#addbtn,#date{
   position: relative;
   width: auto;
   display: flex;
+  box-shadow: 2px 2px 4px 0px rgba(101,101,101,0.30);
 }
 
 
@@ -219,36 +270,6 @@ p{
 }
 
 
-
-#card1,#card2, #card3{
-  background-repeat: no-repeat;
-  position: relative;
-  background-position: right;
-  text-align: center;
-  color: #fff;
-}
-
-#card1{background-image: url(/src/img/card1.svg); }
-#card2{background-image: url(/src/img/card2.svg);}
-#card3{background-image: url(/src/img/card3.svg);}
-
-
-#card_amount{
-  position: absolute;
-  top : 3.7vh;
-  margin-bottom: 20px;
-}
-
-#card_title{
-  position: absolute;
-  bottom : 1.41vh;
-}
-
-#cards{
-  /* width : 100%; */
-  display: flex;
-  justify-content: center;
-}
 
 .filterdate{
 display: flex;
@@ -320,6 +341,11 @@ align-self: center;
       display: none!important;
   }
 
+  .expense2{
+    display: block !important;
+    width: 100%;
+  }
+
   .log_amount,#card_title{
       font: 12px roboto, sans-serif;
       font-weight: bold;
@@ -374,7 +400,7 @@ align-self: center;
 
 #expense .catagory label,#income .catagory label{
 	position: relative;
-	color: #fff;
+	color: #333;
   background: rgba( 255, 255, 255, 0.25 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 13.0px );
@@ -383,11 +409,12 @@ align-self: center;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 	font: 12px roboto, sans-serif;
-  font-weight: 500;
+  font-weight: 600;
 	text-align: center;
   width : 88px;
 	height: 32px;
 	line-height: 32px;
+  border: solid 1px #c4c4c4 ;
 	display: block;
   padding: 0 8px 0 8px;
 	cursor: pointer;
@@ -398,46 +425,54 @@ align-self: center;
 }
 
 
+#expense .catagory label:hover,#income .catagory label:hover{
+ border: solid 2px #c4c4c4;
+ border-width: 2px 2px 0px 2px;
+}
 
 
-#submit_expense{	cursor: pointer; }
+
+
+#submit_expense{	cursor: pointer; 
+  width: 100% !important ;
+border: solid 1px #c4c4c4;}
 
 #expense .catagory .Grocery{box-shadow: 0 6px #2CC0DA ;}
-#expense .catagory #Grocery:checked + label{	background-color: #2CC0DA;}
+#expense .catagory #Grocery:checked + label{background-color: #2CC0DA; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .EatingOut{box-shadow: 0 6px #D95774 ;}
-#expense .catagory #EatingOut:checked + label{	background-color: #D95774;}
+#expense .catagory #EatingOut:checked + label{	background-color: #D95774; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .Household{box-shadow: 0 6px #1FCA6D ;}
-#expense .catagory #Household:checked + label{	background-color: #1FCA6D;}
+#expense .catagory #Household:checked + label{	background-color: #1FCA6D; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .Utility{box-shadow: 0 6px #5467DF ;}
-#expense .catagory #Utility:checked + label{	background-color: #5467DF;}
+#expense .catagory #Utility:checked + label{	background-color: #5467DF; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .Fuel_Auto{box-shadow: 0 6px #C8D62F ;}
-#expense .catagory #Fuel_Auto:checked + label{	background-color: #C8D62F;}
+#expense .catagory #Fuel_Auto:checked + label{	background-color: #C8D62F; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .Personal{box-shadow: 0 6px #D97B5D ;}
-#expense .catagory #Personal:checked + label{	background-color: #D97B5D;}
+#expense .catagory #Personal:checked + label{	background-color: #D97B5D; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .Debt_Repay{box-shadow: 0 6px #AE4EBE ;}
-#expense .catagory #Debt_Repay:checked + label{	background-color: #AE4EBE;}
+#expense .catagory #Debt_Repay:checked + label{	background-color: #AE4EBE; border : none !important;padding-top: 3px; color: #fff;}
 
 #expense .catagory .Other{box-shadow: 0 6px #C13535 ;}
-#expense .catagory #Other:checked + label{	background-color: #C13535;}
+#expense .catagory #Other:checked + label{	background-color: #C13535; border : none !important; padding-top: 3px; color: #fff;}
 
 
 #income .catagory .MyAccount{box-shadow: 0 6px #FCB142 ;}
-#income .catagory #MyAccount:checked + label{	background-color: #FCB142;}
+#income .catagory #MyAccount:checked + label{	background-color: #FCB142; border : none !important;padding-top: 3px; color: #fff;}
 
 #income .catagory .HerAccount{box-shadow: 0 6px #19D54E ;}
-#income .catagory #HerAccount:checked + label{	background-color: #19D54E;}
+#income .catagory #HerAccount:checked + label{	background-color: #19D54E; border : none !important;padding-top: 3px; color: #fff;}
 
 #income .catagory .Cash{box-shadow: 0 6px #F7355F ;}
-#income .catagory #Cash:checked + label{	background-color: #F7355F;}
+#income .catagory #Cash:checked + label{	background-color: #F7355F; border : none !important;padding-top: 3px; color: #fff;}
 
 #income .catagory .OtherIncome{box-shadow: 0 6px #D849B9 ;}
-#income .catagory #OtherIncome:checked + label{	background-color: #D849B9;}
+#income .catagory #OtherIncome:checked + label{	background-color: #D849B9; border : none !important;padding-top: 3px; color: #fff;}
 
 
 
@@ -456,7 +491,7 @@ td{
   border: none !important;
   padding: 2px 0  !important;
   font-size: 14px;
-  color : #ffffff;
+  color : #333333;
 }
 
 .align_right { 

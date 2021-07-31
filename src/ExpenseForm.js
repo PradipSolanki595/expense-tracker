@@ -1,8 +1,8 @@
 import React from 'react';
-import BaseSelect from "react-select";
-import FixRequiredSelect from "./FixRequiredSelect";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import firebase from "./util/firebase";
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 let Sources = [
   { label: "MyAccount", value: "MyAccount" },
@@ -10,14 +10,7 @@ let Sources = [
   { label: "Cash", value: "Cash" },
   { label: "Other", value: "Other" },
 ];
-
-let Select = props => (
-  <FixRequiredSelect
-    {...props}
-    SelectComponent={BaseSelect}
-    Sources={props.Sources || Sources}
-  />
-);
+const defaultOption = Sources[0];
 
 class ExpenseForm extends React.Component {
   constructor(props){
@@ -71,7 +64,7 @@ class ExpenseForm extends React.Component {
 
   render ()  
   {  
-
+    
   const { selectedDrop } = this.state;
   
     return (
@@ -84,7 +77,7 @@ class ExpenseForm extends React.Component {
               <input id="Amount" type="number" ref="Amount" name="amount" placeholder="Amount" required/></p>
 
             <div className="catagory d-block">
-                <div className="d-flex w-100 ">
+                <div className="expense1">
                    
                 <p> <input  type="radio"  name="radio1"  id="Grocery"  value="Grocery"
                              checked={this.state.selectedOption === "Grocery"}
@@ -108,7 +101,7 @@ class ExpenseForm extends React.Component {
                               
 
                 </div>
-                <div className="d-flex w-100">
+                <div className="expense1">
 
                 <p> <input  type="radio"  name="radio1"  id="Fuel_Auto"  value="Fuel_Auto"
                           checked={this.state.selectedOption === "Fuel_Auto"}
@@ -133,18 +126,19 @@ class ExpenseForm extends React.Component {
                 </div>
                </div>       
 
-          <div className="d-flex w-100 ">
+          <div className="expense2 d-flex">
             <p><label htmlFor="Description"></label>
-                <input className="w-auto mb-2" id="Description" type="text" ref="Description" placeholder="Spent for" required/></p>
-                <Select 
-                value={Sources.filter(function(e) { return e.value === selectedDrop;})}
+             <input className="w-auto mb-2" id="Description" type="text" ref="Description" placeholder="Spent for" required/></p>
+               <div >
+                <Dropdown options={Sources} 
+                onChange={this._onSelect}
                 onChange={this.handleSourceChange} 
-                options={Sources}
-                required />
-
+                value={defaultOption} 
+                placeholder="Select an option" />
+              </div>
           </div>
 
-          <div className="d-flex w-100 ">
+          <div className="expense1">
               <label htmlFor="Date"></label>
                <input className="w-auto mr-2" type="date" id="Date" name="Date" ref="Date" required/>
 

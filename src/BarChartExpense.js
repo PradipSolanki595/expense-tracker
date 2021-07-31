@@ -35,7 +35,7 @@ class BarChartExpense extends React.Component {
             <div class="px-4 pb-1" style={{width: "298px"}}> 
             <table class="BarChartExpense table table-borderless">
                   <tbody>
-                  <tr style={{borderBottom: "1px", borderStyle: "solid", borderColor : "#fff", fontWeight : 600,}}>
+                  <tr style={{borderBottom: "1px", borderStyle: "solid", borderColor : "#c4c4c4", fontWeight : 600,}}>
                       <td> 
                       </td>
                       <td>Total</td>

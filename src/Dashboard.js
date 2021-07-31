@@ -7,6 +7,7 @@ import BarChartIncome from './BarChartIncome';
 import BarChartExpense from './BarChartExpense';
 import Select from "react-select";
 import firebase from "./util/firebase";
+import Fade from 'react-reveal/Fade';
 
 let Years = [
   { label: 2020 , value: 2020 },
@@ -228,66 +229,61 @@ let OtherSourceTotal = OtherSourceArray.reduce(function (a,b) { return a + b;},0
 
 
  return (
-        <div class="main_div">
-           {/* <div class="navbar ">
-            </div> */}
-         <div class="dashboard">
-           <div id="topBar" class="">
-              <div class="filterdate" style= {{"margin": "2.71vh 3vw;"}}> 
+              <div class="main_div">
+                  <div id="topBar" class="">
+                    <div class="filterdate" style={{ "margin": "2.71vh 3vw;" }}>
 
-              <Select value={Months.filter(function(e) { return e.value === selectedMonth;})}
-                onChange={this.handleMonthChange} 
-                options={Months} />
+                      <Select value={Months.filter(function (e) { return e.value === selectedMonth; })}
+                        onChange={this.handleMonthChange}
+                        options={Months} />
 
-                <Select value={Years.filter(function(e) { return e.value === selectedYear;})}
-                onChange={this.handleYearChange} 
-                options={Years} />
+                      <Select value={Years.filter(function (e) { return e.value === selectedYear; })}
+                        onChange={this.handleYearChange}
+                        options={Years} />
 
-              </div>
-              <div>             
-                <Card totalExpense = {totalExpense} totalIncome = {totalIncome}  />
-              </div>
+                    </div>
+                    <div>
+                      <Card totalExpense={totalExpense} totalIncome={totalIncome} />
+                    </div>
 
-             </div>
-           <div id="container1" class="container1">
-              <div class="inputs">
-                <div id="row1" class="row1">
-                   <ExpenseForm onChangeDatabase={this.changeDatabase}/>
-                   <IncomeForm onChangeDatabase1={this.changeDatabase1}/>
-                   </div>
-                <div id="row2" class="row2 ml-4 mt-3">
-                   <BarChartIncome 
-                   totalExpense = {totalExpense}
-                   totalIncome = {totalIncome} 
-                   myAccountTotal = {myAccountTotal}
-                   herAccountTotal = {herAccountTotal}
-                   cashTotal = {cashTotal}
-                   otherTotal = {otherTotalIncome}
-                   MyAccountSourceTotal = {MyAccountSourceTotal}
-                   HerAccountSourceTotal = {HerAccountSourceTotal}
-                   CashSourceTotal = {CashSourceTotal}
-                   OtherSourceTotal = {OtherSourceTotal}
-                   />
-                   <BarChartExpense 
-                   totalExpense = {totalExpense}
-                   GroceryTotal = {GroceryTotal}
-                   EatingOutTotal = {EatingOutTotal}
-                   HouseholdTotal = {HouseholdTotal}
-                   UtilityTotal = {UtilityTotal}
-                   Fuel_AutoTotal = {Fuel_AutoTotal}
-                   PersonalTotal = {PersonalTotal}
-                   Debt_RepayTotal = {Debt_RepayTotal}
-                   OtherTotalExpense = {OtherTotalExpense}
-                   />
-                 </div>
+                  </div>
+                  <div id="container1" class="container1">
+                    <div class="inputs">
+                      <div id="row1" class="row1">
+                        <ExpenseForm onChangeDatabase={this.changeDatabase} />
+                        <IncomeForm onChangeDatabase1={this.changeDatabase1} />
+                      </div>
+                      <div id="row2" class="row2 ml-4 mt-3">
+                        <BarChartIncome
+                          totalExpense={totalExpense}
+                          totalIncome={totalIncome}
+                          myAccountTotal={myAccountTotal}
+                          herAccountTotal={herAccountTotal}
+                          cashTotal={cashTotal}
+                          otherTotal={otherTotalIncome}
+                          MyAccountSourceTotal={MyAccountSourceTotal}
+                          HerAccountSourceTotal={HerAccountSourceTotal}
+                          CashSourceTotal={CashSourceTotal}
+                          OtherSourceTotal={OtherSourceTotal}
+                        />
+                        <BarChartExpense
+                          totalExpense={totalExpense}
+                          GroceryTotal={GroceryTotal}
+                          EatingOutTotal={EatingOutTotal}
+                          HouseholdTotal={HouseholdTotal}
+                          UtilityTotal={UtilityTotal}
+                          Fuel_AutoTotal={Fuel_AutoTotal}
+                          PersonalTotal={PersonalTotal}
+                          Debt_RepayTotal={Debt_RepayTotal}
+                          OtherTotalExpense={OtherTotalExpense}
+                        />
+                      </div>
+                    </div>
+                    <div class="history glass p-1">
+                        {data1}
+                    </div>
+                  </div>
                 </div>
-              <div class="history glass p-1">
-                   {data1}
-               </div>
-           </div>
-         </div>
-
-        </div>
   )
  }
 }
