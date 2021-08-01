@@ -9,6 +9,7 @@ import Select from "react-select";
 import firebase from "./util/firebase";
 import Fade from 'react-reveal/Fade';
 
+
 let Years = [
   { label: 2020 , value: 2020 },
   { label: 2021 , value: 2021 },
@@ -89,10 +90,13 @@ handleMonthChange = (x) => {
   this.setState({ selectedMonth: x.value });
 }
 
+// signOut (){
+//     localStorage.removeItem('user')
+// }
 
 
  render (){
-
+ 
   const { selectedYear, selectedMonth } = this.state;
   // data for Logs => Start //
 
@@ -245,6 +249,10 @@ let OtherSourceTotal = OtherSourceArray.reduce(function (a,b) { return a + b;},0
                     </div>
                     <div>
                       <Card totalExpense={totalExpense} totalIncome={totalIncome} />
+                    </div>
+                    
+                    <div>
+                      <button onClick = {this.signOut}> Sign Out </button>
                     </div>
 
                   </div>
