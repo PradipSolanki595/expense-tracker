@@ -233,7 +233,7 @@ input,select,#addbtn,#date{
 #Date { width: 50% !important;}
 
 .Dropdown-control {
-  border-radius: 8px;
+  border-radius: 8px !important;
   margin-left: 8px;
   width: 100%;
 }
@@ -385,9 +385,15 @@ align-self: center;
 
 
 /* Form styles*/
-#Amount {
+#Amount, #Description{
   width: 100%;
 }
+
+#Amount:hover,#Description:hover {
+  border: solid 1px #23C2EC;
+  background-color: #23c0ec1c;
+}
+
 
 .catagory {
   display: flex;
@@ -435,7 +441,11 @@ align-self: center;
 
 #submit_expense{	cursor: pointer; 
   width: 100% !important ;
-border: solid 1px #c4c4c4;}
+border: solid 1px #23C2EC;}
+
+#submit_expense:hover{
+border: solid 1px #23C2EC;
+background-color: #23c0ec3f;}
 
 #expense .catagory .Grocery{box-shadow: 0 6px #2CC0DA ;}
 #expense .catagory #Grocery:checked + label{background-color: #2CC0DA; border : none !important;padding-top: 3px; color: #fff;}
@@ -513,4 +523,14 @@ td{
 
 .css-2613qy-menu {
   z-index: 100 !important;
+}
+
+
+
+
+.login{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

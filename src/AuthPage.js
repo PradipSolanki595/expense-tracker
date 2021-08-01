@@ -15,7 +15,8 @@ function AuthPage(props) {
     }
 
      return (
-         <div>
+         <div className = "login">
+             <div>
             <GoogleLogin
                 clientId="601813199582-kp9cvkcmt2hb0q6183qe2fsh4ocavtur.apps.googleusercontent.com"
                 buttonText="Login"
@@ -23,6 +24,7 @@ function AuthPage(props) {
                 onFailure={() => {history.push("/");}}
                 cookiePolicy={'single_host_origin'}
             />,
+            </div>
         </div>
      ) 
 

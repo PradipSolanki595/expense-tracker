@@ -117,6 +117,7 @@ let data1 = sortedData.map(x => <Log Type={x.Type} Amount={x.Amount} Description
   // data for Logs => End//
 
 
+
   // data for Cards => Start //
 var expenseAmount = ExpenseData.map((key)=>parseInt(key.Amount));
 var totalExpense = expenseAmount.reduce(function(a, b){ return a + b; }, 0);

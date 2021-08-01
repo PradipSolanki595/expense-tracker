@@ -1,6 +1,7 @@
 import React from 'react';
 import Dashboard from './Dashboard';
 import AuthPage from './AuthPage';
+import LogTable from './LogTable';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
@@ -26,6 +27,9 @@ class App extends React.Component {
                 </Route>
                 <Route path="/dashboard">
                   <Dashboard />
+                </Route>
+                <Route path="/logs">
+                  <LogTable />
                 </Route>
             </Switch>
           </div>
