@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/PradipSolanki595/expense-tracker/static/css/main.0ab6b660.chunk.css",
-    "main.js": "/PradipSolanki595/expense-tracker/static/js/main.94454aeb.chunk.js",
-    "main.js.map": "/PradipSolanki595/expense-tracker/static/js/main.94454aeb.chunk.js.map",
-    "runtime-main.js": "/PradipSolanki595/expense-tracker/static/js/runtime-main.63ee6ef9.js",
-    "runtime-main.js.map": "/PradipSolanki595/expense-tracker/static/js/runtime-main.63ee6ef9.js.map",
-    "static/css/2.b099eb91.chunk.css": "/PradipSolanki595/expense-tracker/static/css/2.b099eb91.chunk.css",
-    "static/js/2.0ebc0ac7.chunk.js": "/PradipSolanki595/expense-tracker/static/js/2.0ebc0ac7.chunk.js",
-    "static/js/2.0ebc0ac7.chunk.js.map": "/PradipSolanki595/expense-tracker/static/js/2.0ebc0ac7.chunk.js.map",
-    "static/js/3.d6efacb9.chunk.js": "/PradipSolanki595/expense-tracker/static/js/3.d6efacb9.chunk.js",
-    "static/js/3.d6efacb9.chunk.js.map": "/PradipSolanki595/expense-tracker/static/js/3.d6efacb9.chunk.js.map",
-    "index.html": "/PradipSolanki595/expense-tracker/index.html",
-    "static/css/2.b099eb91.chunk.css.map": "/PradipSolanki595/expense-tracker/static/css/2.b099eb91.chunk.css.map",
-    "static/css/main.0ab6b660.chunk.css.map": "/PradipSolanki595/expense-tracker/static/css/main.0ab6b660.chunk.css.map",
-    "static/js/2.0ebc0ac7.chunk.js.LICENSE.txt": "/PradipSolanki595/expense-tracker/static/js/2.0ebc0ac7.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/PradipSolanki595/expense-tracker/static/media/card3.520d742a.svg"
+    "main.css": "/PradipSolanki595/expense-tracker-V100/static/css/main.3056db8d.chunk.css",
+    "main.js": "/PradipSolanki595/expense-tracker-V100/static/js/main.94454aeb.chunk.js",
+    "main.js.map": "/PradipSolanki595/expense-tracker-V100/static/js/main.94454aeb.chunk.js.map",
+    "runtime-main.js": "/PradipSolanki595/expense-tracker-V100/static/js/runtime-main.2b1f158e.js",
+    "runtime-main.js.map": "/PradipSolanki595/expense-tracker-V100/static/js/runtime-main.2b1f158e.js.map",
+    "static/css/2.b099eb91.chunk.css": "/PradipSolanki595/expense-tracker-V100/static/css/2.b099eb91.chunk.css",
+    "static/js/2.aa0053ad.chunk.js": "/PradipSolanki595/expense-tracker-V100/static/js/2.aa0053ad.chunk.js",
+    "static/js/2.aa0053ad.chunk.js.map": "/PradipSolanki595/expense-tracker-V100/static/js/2.aa0053ad.chunk.js.map",
+    "static/js/3.d6efacb9.chunk.js": "/PradipSolanki595/expense-tracker-V100/static/js/3.d6efacb9.chunk.js",
+    "static/js/3.d6efacb9.chunk.js.map": "/PradipSolanki595/expense-tracker-V100/static/js/3.d6efacb9.chunk.js.map",
+    "index.html": "/PradipSolanki595/expense-tracker-V100/index.html",
+    "static/css/2.b099eb91.chunk.css.map": "/PradipSolanki595/expense-tracker-V100/static/css/2.b099eb91.chunk.css.map",
+    "static/css/main.3056db8d.chunk.css.map": "/PradipSolanki595/expense-tracker-V100/static/css/main.3056db8d.chunk.css.map",
+    "static/js/2.aa0053ad.chunk.js.LICENSE.txt": "/PradipSolanki595/expense-tracker-V100/static/js/2.aa0053ad.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/PradipSolanki595/expense-tracker-V100/static/media/card3.520d742a.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.63ee6ef9.js",
+    "static/js/runtime-main.2b1f158e.js",
     "static/css/2.b099eb91.chunk.css",
-    "static/js/2.0ebc0ac7.chunk.js",
-    "static/css/main.0ab6b660.chunk.css",
+    "static/js/2.aa0053ad.chunk.js",
+    "static/css/main.3056db8d.chunk.css",
     "static/js/main.94454aeb.chunk.js"
   ]
 }
